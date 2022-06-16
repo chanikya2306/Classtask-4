@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-12 header">
+        <h5>Api Methods & Npm Installation</h5>
+    </div>
+</div>
+<div class="row">
+    <div class="clo-12 nmaes">
+        <h6><u>{{firstnamedispaly}}&nbsp;&nbsp;{{lastnamedisplay}}</u></h6>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3 body">
+        <form [formGroup]="registerform">
+            <div>
+                <input type="text" placeholder="enter your name" formControlName="firstname">
+                <p *ngIf="Firstname.invalid && Firstname.touched">Please Enter Your First Name</p>
+            </div>
+
+            <div>
+                <input type="text" placeholder="enter your name" formControlName="lastname">
+                <p *ngIf="Lastname.invalid && Lastname.touched"> Please Enter Your Last Name</p>
+            </div>
+            <div>
+                <input type="text" placeholder="enter your username here" formControlName="username"><br>
+                <p *ngIf="Username.invalid && Username.touched">Please Enter Your User Name</p>
+            </div>
+            <div>
+                <input type="password" placeholder="enter your password" formControlName="password">
+                <p *ngIf="password.invalid && password.touched">Please Enter Your Password</p>
+            </div>
+            <div>
+                <input type="password" placeholder="confirm your password" formControlName="confirmpassword">
+                <p *ngIf="confirmpassword.touched  && confirmpassword.invalid ">Please Enter Your Conform Password</p>
+            </div>
+
+            <div>
+                <input type="text" formControlName="gender" placeholder="Enter Your Gender">
+                <p *ngIf="gender.touched  && gender.invalid "> Please Type Your Gender</p>
+            </div>
+            <div>
+                <button (click)="onsubmit()" type="submit" [disabled]="!registerform.valid"
+                    class="btn btn-primary">submit</button>
+                <button class="btn btn-primary clear" type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-7 database">
+        <div>
+            <table>
+                <tr>
+                    <th>SL NO</th>
+                    <th>First Name</th>
+                    <th>Lasst Name</th>
+                    <th>User Name</th>
+                    <th>Password</th>
+                    <th>Confirm Password</th>
+                    <th>Gender</th>
+                </tr>
+                <tr *ngFor="let item of list_of_data;let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.firstname}}</td>
+                    <td>{{item.lastname}}</td>
+                    <td>{{item.username}}</td>
+                    <td>{{item.password}}</td>
+                    <td>{{item.confirmpassword}}</td>
+                    <td>{{item.gender}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="jsondeatils">
+            <div class="josondata">
+                <h6>Json Get Method Data</h6>
+            </div>
+            <div class="jsontable">
+                <table>
+                    <tr>
+                        <th>SL No</th>
+                        <th>Data</th>
+                    </tr>
+                    <tr *ngFor="let item of jsondata ; let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

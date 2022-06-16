@@ -1,0 +1,85 @@
+.header {
+    border: outset gray 5px;
+    background-color: rgb(7, 25, 25);
+    color: yellow;
+    text-align: center;
+}
+
+.body {
+    border: inset gray 10px;
+    background-color: whitesmoke;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+form {
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+}
+
+p {
+    color: red;
+    font-weight: 500;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-left: 30px;
+
+}
+
+td {
+    border: 1px solid #dddddd;
+    color: green;
+    font-weight: 600;
+    text-align: center;
+}
+
+th {
+    border: 1px solid #dddddd;
+    color: red;
+    font-weight: 700;
+    text-align: center;
+}
+
+.database {
+    border: inset gray 10px;
+    margin-left: 100px;
+    margin-top: 30px;
+    background-color: rgb(7, 25, 25);
+}
+
+.clear {
+    margin-left: 20px;
+}
+
+.nmaes {
+    color: yellowgreen;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.josondata {
+    text-align: center;
+    color: yellow;
+
+}
+
+.jsontable {
+    margin-left: 280px;
+}
+
+.jsondeatils {
+    margin-top: 30px;
+
+}
