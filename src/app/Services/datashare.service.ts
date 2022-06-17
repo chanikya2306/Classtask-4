@@ -15,7 +15,7 @@ export class DatashareService {
   }
   readData() {
     this.header = this.getHeaders();
-    console.log(this.header)
+
     // let url = environment.apiGet + 'api/User/validateUserName/{username}';
     let url = environment.apiGet + 'api/User/validateUserName/suresh';
     return this.http.get(url, this.header);

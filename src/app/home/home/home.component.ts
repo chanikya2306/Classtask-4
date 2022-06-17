@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
 
   getMethod() {
     this.api.readData().subscribe((response: any) => {
-      console.log(response.Status);
+      console.log(response);
       this.jsondata.push(response)
     })
 
