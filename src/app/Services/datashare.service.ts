@@ -14,7 +14,7 @@ export class DatashareService {
     return this.http.post(url, form)
   }
   readData() {
-    let url = environment.apiGet + 'api/User/validateUserName/%7Busername%7D';
+    let url = environment.apiGet + 'api/User/validateUserName/{username}';
     return this.http.get(url);
   }
 
