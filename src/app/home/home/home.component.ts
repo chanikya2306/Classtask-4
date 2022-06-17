@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DatashareService } from 'src/app/Services/datashare.service';
 import { ToastrService } from 'ngx-toastr';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -81,7 +82,7 @@ export class HomeComponent implements OnInit {
 
   getMethod() {
     this.api.readData().subscribe((response: any) => {
-      console.log(response);
+      console.log(response.Status);
       this.jsondata.push(response)
     })
 
